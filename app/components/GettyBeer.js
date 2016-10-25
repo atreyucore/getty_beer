@@ -11,7 +11,6 @@ var GettyBeer = React.createClass({
     };
   },
   updateBeer: function(beer) {
-    console.log(beer);
     this.setState({beer: beer});
   },
   render: function() {

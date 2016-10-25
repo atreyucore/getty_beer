@@ -21437,7 +21437,6 @@
 	    };
 	  },
 	  updateBeer: function (beer) {
-	    console.log(beer);
 	    this.setState({ beer: beer });
 	  },
 	  render: function () {
@@ -21474,7 +21473,6 @@
 
 	    BeerService.getBeerName(this.refs.beername.value).then(function (response) {
 	      this.props.updateBeer(response.data.data[0]);
-	      console.log(response.data.data[0]);
 	    }.bind(this));
 	  },
 	  render: function () {
