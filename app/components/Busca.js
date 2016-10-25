@@ -14,26 +14,18 @@ var Busca = React.createClass({
   },
   render: function() {
     return(
-      
-      <div className="jumbotron">
-        <h1>Getty Beer</h1>
-        <div className="row">
-          <form>
-            <div className="form-group">
-              <label>Escolha sua breja</label>
-              <input
-                type="text"
-                ref="beername"
-                className="form-control"
-                placeholder="Ex: Stella Artois"
-                />
-            </div>
-            <Button onClick={this.handleSubmit} icon={<SearchIcon />} label="Buscar" plain={true} />
-       
-          </form>
+      <form>
+        <div className="form-group">
+          <label>Escolha sua breja</label>
+          <input
+            type="text"
+            ref="beername"
+            className="form-control"
+            placeholder="Ex: Stella Artois"
+            />
         </div>
-      </div>
-          
+        <Button onClick={this.handleSubmit} icon={<SearchIcon />} label="Buscar" plain={true} />
+      </form>
       
     );
   }
