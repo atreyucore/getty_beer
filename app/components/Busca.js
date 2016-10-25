@@ -2,7 +2,9 @@ var React = require('react');
 var ReactDOM = require('react-dom');
 var Button = require('grommet/components/Button');
 var SearchIcon = require('grommet/components/icons/base/Search');
+var AddIcon = require('grommet/components/icons/base/Add');
 var BeerService = require('../services/BeerService')
+var Modal = require('./Modal');
 
 var Busca = React.createClass({
   handleSubmit: function(e) {
@@ -24,7 +26,8 @@ var Busca = React.createClass({
             placeholder="Ex: Stella Artois"
             />
         </div>
-        <Button onClick={this.handleSubmit} icon={<SearchIcon />} label="Buscar" plain={true} />
+        <Button onClick={this.handleSubmit} icon={<SearchIcon />} label="Search" plain={true} />
+        <Button onClick={"<Modal />"} icon={<AddIcon />} label="Add Beer" plain={true} />
       </form>
       
     );

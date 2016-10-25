@@ -1,7 +1,7 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var Busca = require('./Busca');
-var Lista = require('./Lista');
+var Modal = require('./Modal');
 var Formulario = require('./Formulario');
 var Nav = require('./Nav');
 
@@ -26,7 +26,7 @@ var GettyBeer = React.createClass({
           <Busca
           updateBeer={this.updateBeer}
           />
-          <Lista
+          <Modal
             beer={this.state.beer}
           />
           <Formulario />  
