@@ -5,15 +5,18 @@ function Lista(props) {
     (
       <div className="row">
         <div className="col-lg-4">
-          <h2>{props.beer.data.nameDisplay}</h2>
-          <p>{props.beer.data.name}</p>
-          <p>Description: {props.beer.data.description}</p>
+          <h2>{props.beer.name}</h2>
+          <p>{props.beer.description}</p>
         </div>
       </div>
     ) : null;
 
     return Lista;
 }
+
+Lista.propTypes = {
+  beer: React.PropTypes.object
+};
 
 
 module.exports = Lista;

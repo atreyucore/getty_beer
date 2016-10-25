@@ -7,9 +7,10 @@ var BeerService = require('../services/BeerService')
 var Busca = React.createClass({
   handleSubmit: function(e) {
     e.preventDefault();
-    console.log(this.refs.beername.value);
+
     BeerService.getBeerName(this.refs.beername.value).then(function(response) {
-      this.props.updateBeer(response.data);
+      this.props.updateBeer(response.data.data[0]);
+      console.log(response.data.data[0]);
     }.bind(this));
   },
   render: function() {

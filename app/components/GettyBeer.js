@@ -7,10 +7,11 @@ var GettyBeer = React.createClass({
 
   getInitialState: function() {
     return {
-      beer: null,
+      beer: null
     };
   },
   updateBeer: function(beer) {
+    console.log(beer);
     this.setState({beer: beer});
   },
   render: function() {
@@ -19,7 +20,9 @@ var GettyBeer = React.createClass({
         <Busca
           updateBeer={this.updateBeer}
           />
-        <Lista />
+        <Lista
+          beer={this.state.beer}
+        />
       </div>
     );
   }
