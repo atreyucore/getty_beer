@@ -1,10 +1,11 @@
-var axios = require('axios');
-const key = 'bc247e676dd24bf7965d3bace8efee51';
-const url = 'http://api.brewerydb.com/v2/';
+import axios from 'axios';
 
-var BeerService = {
-  getBeerName: function (beername) {
-    return axios.get(url+'beers/?key='+key+'&name='+beername);
+const BeerService = {
+  getBeerName(beername) {
+    return axios.get(`http://api.brewerydb.com/v2/beers/?key=bc247e676dd24bf7965d3bace8efee51&name=${beername}`);
+  },
+  getStyles() {
+    return axios.get(`http://api.brewerydb.com/v2/styles/?key=bc247e676dd24bf7965d3bace8efee51`);
   }
 };
 

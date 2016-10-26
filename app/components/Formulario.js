@@ -1,22 +1,18 @@
-var React = require('react');
-var Form = require('grommet/components/Form');
-var FormFields = require('grommet/components/FormFields');
-var FormField = require('grommet/components/FormField');
-var Header = require('grommet/components/Header');
-var Footer = require('grommet/components/Footer');
-var Button = require('grommet/components/Button');
-var Select = require('grommet/components/Select');
+import React from 'react';
+import Form from 'grommet/components/Form';
+import FormFields from 'grommet/components/FormFields';
+import FormField from 'grommet/components/FormField';
+import Header from 'grommet/components/Header';
+import Footer from 'grommet/components/Footer';
+import Button from 'grommet/components/Button';
+import Select from 'grommet/components/Select';
 
 
-var Formulario = React.createClass({
-  render: function () {
+class Formulario extends React.Component{
+  render () {
     return (
 
-
       <Form compact={true}>
-        <Header>
-          <h3>Add Beer</h3>
-        </Header>
         <FormFields>
           <fieldset>
             <FormField label="Beer Name">
@@ -38,6 +34,6 @@ var Formulario = React.createClass({
     );
   }
 
-});
+}
 
-module.exports = Formulario;
+export default Formulario;

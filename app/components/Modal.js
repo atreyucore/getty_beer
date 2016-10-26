@@ -1,26 +1,26 @@
-var React = require('react');
-var Paragraph = require('grommet/components/Paragraph');
-var Title = require('grommet/components/Title');
-var Layer = require('grommet/components/Layer');
-var CloseIcon = require('grommet/components/icons/base/Close');
+import React from 'react';
+import Paragraph from 'grommet/components/Paragraph';
+import Title from 'grommet/components/Title';
+import Box from 'grommet/components/Box';
+import Heading from 'grommet/components/Heading'
 
 
-var Modal = React.createClass({
-  render: function(props) {
-    var modal = this.props.beer ?
+const Modal = ({beer}) => {
+
+    var modal = beer ?
     (
-      <Layer onClose={close} closer={true} align="top">
-          <Title>{this.props.beer.name}</Title>
-          <Paragraph>Description: {this.props.beer.description}</Paragraph>
-          <Paragraph>Description: {this.props.beer.glass.name}</Paragraph>
-      </Layer>
-     
-
+      <Box>
+        <Box pad="medium" align="center" justify="center" colorIndex="neutral-4-a">
+          <Title>{beer.name} | {beer.abv}% alcohol</Title>
+        </Box>
+        <Box pad="medium" align="center" justify="center" colorIndex="neutral-2">
+          <Heading tag="h4">Description</Heading>
+          <Paragraph>{beer.description}</Paragraph>
+        </Box>
+      </Box>
     ) : null
     return modal;
-  }
-});
-
+}
 Modal.propTypes = {
   beer: React.PropTypes.object
 };
